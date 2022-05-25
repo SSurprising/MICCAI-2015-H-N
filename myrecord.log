@@ -1,0 +1,136 @@
+ce
+    29.55 38.21
+    46.93 58.00
+
+dice
+    20.66 36.82
+    43.38 73.49
+
+4\6:
+    channels 512
+    ce: wightout weight
+    batch size: 1
+    epochs: 2000
+
+5:
+    ce: w/ weight
+    auxiliary loss
+    epochs: 1000
+
+    SGD and poly learning rate
+
+6:
+    ce: w/o weight
+    auxiliary loss
+    epochs: 2000
+
+
+expand_slice=-1
+7:
+    ce: w/ weight
+    auxiliary loss
+    epochs: 1000
+    batchsize=1
+    SGD and poly learning rate
+
+
+SC_UNet
+slice expand 0
+1
+    ce: w/ weight expand2
+    random crop
+    seed 1
+    epochs:649
+    batchsize=1
+    SGD and poly learning rate
+    best epoch:
+    best val:
+
+slice expand 2
+1:
+    ce: w/ weight expand2
+    random crop
+    seed 1
+    epochs:649
+    batchsize=1
+    SGD and poly learning rate
+    best epoch: 574/649
+    best val: 56.623 57.686
+
+1:
+    ce: w/ weight expand2
+    random crop
+    seed 1
+    epochs:649
+    batchsize=1
+    SGD and poly learning rate
+    best epoch:
+    best val:
+
+/////////////////////////////////
+UNet
+1:
+    dice expand0
+    epochs: 1000
+    batchsize=1
+    SGD and poly learning rate
+    best epoch:
+    best val: 52.311
+
+
+2:
+    dice expand0
+    epochs: 1000
+    batchsize=1
+    SGD and poly learning rate
+    best_epoch: 56
+    best val: 55.8875
+
+3:
+    dice expand0
+    seed 1
+    epochs: 1000
+    batchsize=1
+    SGD and poly learning rate
+    best epoch: 327
+    best val: 54.089
+
+4:
+    dice expand0
+    seed 1
+    epochs: 1000
+    batchsize=1
+    SGD and poly learning rate
+    best epoch: 327
+    best val: 54.089
+
+---------------------------------
+3:
+    ce: w/ weight expand0
+    epochs:1000
+    batchsize=1
+    SGD and poly learning rate
+    best epoch: 291
+    best val: 54.87
+
+4:
+    ce: w/ weight expand0
+    seed 1
+    epochs:1000
+    batchsize=1
+    SGD and poly learning rate
+    best epoch: 779
+    best val: 57.91
+
++++++++++++++++++++++
+slice expand 2
+1/2:
+    ce: w/ weight expand2
+    random crop
+    seed 1
+    epochs:1000
+    batchsize=1
+    SGD and poly learning rate
+    best epoch: 228
+    best val: 57.44
+
